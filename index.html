@@ -78,8 +78,11 @@
 
         <!-- WHY (USE CASES) -->
         <section>
-          <h2>Use cases</h2>
-          <img class="stretch" src="lib/images/sseUseCases.png">
+          <section><h2>Use cases</h2></section>
+          <section><img class="stretch" src="lib/images/useCaseFb.png"></section>
+          <section><img class="stretch" src="lib/images/useCaseTwitter.png"></section>
+          <section><img class="stretch" src="lib/images/useCaseJira.png"></section>
+          <section><img class="stretch" src="lib/images/useCaseChemplanner.png"></section>
         </section>
 
         <!-- BE ADVISED -->
@@ -221,6 +224,10 @@ res.end();
             </code></pre>
           </section>
 
+          <section>
+            <p>Here's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Sending_events_from_the_server">a PHP implementation</a>, if you're interested.</p>
+          </section>
+
         </section>
 
         <!-- COMPARE -->
@@ -253,10 +260,17 @@ res.end();
               <ul>
                 <li>Drains resources by sending requests, on a timer, for the entire lifetime of the app.</li>
                 <li>Annoyingly floods network logs with a gazillion entries nobody cares for.</li>
-                <li>It's so 2010 (apparently the very first Comet implementations date back to 2000).</li>
+                <li>It's so 2010.<sup>*</sup></li>
               </ul>
             </div>
+            <p class="fragment"><small><sup>*</sup>Actually the very first Comet implementations date back to 2000</small></p>
           </section>
+        </section>
+
+        <!-- DON'T FORGET-->
+        <section>
+          <h3>Remember, Chrome is your friend</h3>
+          <img class="stretch" src="lib/images/chromeIsYourFriend.png">
         </section>
 
         <!-- READ & DO MORE -->

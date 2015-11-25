@@ -164,19 +164,20 @@ eventSource.addEventListener('open', function (event) {
           <section>
             <h2>HOW (SERVER SIDE)</h2>
             <pre><code class="javascript">
-// We receive an HTTP request
+// In this Node.js example, we receive an HTTP request
 // (e.g. on http://some.service.com/event-source/)
-// So we're given a response object 'res' to write onto
+// so we're given a response object 'res' to write onto
 
-// 1) We write a couple of HTTP headers onto the response
+// 1) We write necessary-ish HTTP headers onto the response
 res.writeHead(200, {
   'Content-Type': 'text/event-stream',
+  'Cache-Control': 'no-cache',
   'Connection': 'keep-alive'
 });
 
 // 2) Then we write an event (= simply text) onto the response
 res.write('event:progress\n');
-res.write('data:' + JSON.stringify({ percentage: 15 }) + '\n\n');
+res.write('data:' + JSON.stringify({ currentProgress: 15 }) + '\n\n');
             </code></pre>
           </section>
           <section>

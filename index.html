@@ -113,13 +113,13 @@
         <section>
           <section>
             <h2>Okay, how does this work?</h2>
-            <pre><code class="js" data-trim contenteditable style="font-size: 18px;">
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 // Subscribe for events on event source of given URL
 var eventSource = new EventSource("http://some.service.com/event-source/");
             </code></pre>
           </section>
           <section>
-            <pre><code class="js" data-trim contenteditable style="font-size: 18px;">
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 // Subscribe for events on event source of given URL
 var eventSource = new EventSource("http://some.service.com/event-source/");
 
@@ -131,7 +131,7 @@ eventSource.addEventListener("progress", function (event) {
             </code></pre>
           </section>
           <section>
-            <pre><code class="js" data-trim contenteditable style="font-size: 18px;">
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 // Subscribe for events on event source of given URL
 var eventSource = new EventSource("http://some.service.com/event-source/");
 
@@ -146,7 +146,7 @@ eventSource.close();
             </code></pre>
           </section>
           <section>
-            <pre><code class="js" data-trim contenteditable style="font-size: 18px;">
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 // Listen for errors
 eventSource.addEventListener('error', function (event) {
   if (event.readyState === EventSource.CLOSED) {
@@ -158,7 +158,7 @@ eventSource.addEventListener('error', function (event) {
             </code></pre>
           </section>
           <section>
-            <pre><code class="js" data-trim contenteditable style="font-size: 18px;">
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 // Listen for notifications that the SSE connection has been established
 eventSource.addEventListener('open', function (event) {
   console.log('Connection was opened, here come the tasty events');
@@ -171,7 +171,7 @@ eventSource.addEventListener('open', function (event) {
         <section>
           <section>
             <h2>HOW (SERVER SIDE)</h2>
-            <pre><code class="js">
+            <pre><code class="javascript">
 // We receive an HTTP request
 // (e.g. on http://some.service.com/event-source/)
 // So we're given a response object 'res' to write onto
@@ -188,14 +188,14 @@ res.write('data:' + JSON.stringify({ percentage: 15 }) + '\n\n');
             </code></pre>
           </section>
           <section>
-            <pre><code class="js">
+            <pre><code class="javascript">
 // To send a second progress event, we simply repeat
 res.write('event:progress\n');
 res.write('data:' + JSON.stringify({ percentage: 20 }) + '\n\n');
             </code></pre>
           </section>
           <section>
-            <pre><code class="js">
+            <pre><code class="javascript">
 // To send a ping event every second
 
 var id = 0;
@@ -218,7 +218,7 @@ setInterval(function () {
           </section>
           <section>
             <h3>How does that differ from a vanilla HTTP server?</h3>
-            <pre><code class="js">
+            <pre><code class="javascript">
 // We never
 res.end();
             </code></pre>

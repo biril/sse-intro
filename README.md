@@ -1,9 +1,8 @@
 # Intro to SSE
 
-Presentation made with [reveal.js](https://github.com/hakimel/reveal.js).
+[View SSE intro presentation](https://biril.github.io/sse-intro).
 
-Open `./index.html` to view. (`grunt serve --port <your-favourite-local-port>` for the fancier
-reveal.js features such as live reload while editing).
+Made with [reveal.js](https://github.com/hakimel/reveal.js).
 
 ----
 
